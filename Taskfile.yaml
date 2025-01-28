@@ -1,0 +1,14 @@
+# https://taskfile.dev/
+
+version: "3"
+
+tasks:
+  migrate:
+    desc: "Apply migrations"
+    cmds:
+      - go run ./cmd/migrator --dsn=postgres://your_user:your_password@localhost:5432/sso?sslmode=disable --migrations-path=./migrations
+
+  start_server:
+    desc: "Start gRPC server"
+    cmds:
+      - go run cmd/sso/main.go --config=./config/local.yaml

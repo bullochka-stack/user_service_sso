@@ -1,0 +1,10 @@
+env: "local" # dev, prod
+token_ttl: 1h
+grpc:
+  port: 44044
+  timeout: 10s
+db:
+  host: "localhost"
+  port: 5432
+  user: "your_user"
+  database: "sso"
